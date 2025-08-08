@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+import Dashboard from './dashboard';
 
 export const meta = () => ([
   { title: 'Nexora | Auth' },
@@ -8,7 +9,7 @@ export const meta = () => ([
 
 export default function Home() {
   const navigate = useNavigate();
-  const [isLoggegIn, setIsLoggedIn] = useState(false);
+  const [isLoggegIn, setIsLoggedIn] = useState(true);
 
   useEffect(() => {
     if (!isLoggegIn) {
@@ -27,7 +28,7 @@ export default function Home() {
 
   return (
     <div>
-      logged in
+      <Dashboard />
     </div>
   );
 }
